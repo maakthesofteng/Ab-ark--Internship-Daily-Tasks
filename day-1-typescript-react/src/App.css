@@ -1,0 +1,45 @@
+/* Tile card: consistent height and responsive image */
+.user-card {
+  min-height: 360px; /* taller cards for better visual balance */
+}
+
+/* Image wrapper provides padding and subtle background to highlight the photo */
+.user-card-img-wrapper {
+  padding: 0.75rem;
+  background-color: #f8f9fa;
+}
+
+.user-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+/* Slightly shorter cards on very small screens */
+@media (max-width: 575.98px) {
+  .user-card {
+    min-height: 300px;
+  }
+
+  .user-card-img {
+    height: 140px;
+  }
+}
+
+/* spacing inside card body */
+.user-card .card-body {
+  min-width: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* subtle hover lift to indicate interactivity */
+.user-card:hover {
+  transform: translateY(-4px);
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.12);
+}
+
+
